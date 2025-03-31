@@ -1,0 +1,125 @@
+/* menu */
+
+header {
+    z-index: 20; 
+    position: fixed; 
+}
+
+#menu {
+    z-index: 30; 
+    position: fixed; 
+}
+
+
+
+.navbar {
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+
+}
+.logo {
+    font-family: 'Lobster', cursive;
+    font-size: 24px;
+    color: #d4a373;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+.nav-links li {
+    margin: 0 15px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #d4a373;
+    font-size: 18px;
+    transition: 0.3s;
+}
+.nav-links a:hover {
+    color: #fff;
+}
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+.menu-toggle div {
+    width: 30px;
+    height: 3px;
+    background-color: #d4a373;
+    margin: 5px;
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #000;
+        width: 100%;
+        text-align: center;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+/* fim  menu */
+
+
+
+/* conteudo main banner */
+
+@keyframes animateFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate__fadeIn {
+    animation: animateFadeIn 1s ease-out forwards;
+}
+
+.animate__delay-1s {
+    animation-delay: 1s;
+}
+
+
+.bg-cover {
+    background-size: cover;
+}
+
+.bg-center {
+    background-position: center center;
+}
+
+
+.textPrincipal{
+    text-shadow: #fff 2px 2px 2px;
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+.font-display {
+    font-family: 'Montserrat', serif;
+}

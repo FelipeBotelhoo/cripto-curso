@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelCraft</title>
+    <link rel="shortcut icon" href="./img/logocripto.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/home.css">
+    <!--Google Font-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-gray-100">
+
+
+    <header class="bg-white fixed top-0 w-full z-50 shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex h-20 items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center h-12">
+                    <div class="h-full flex items-center">
+                        <img src="./img/logo/logocripto.png" alt="Logo" class="h-40 w-auto object-contain max-h-40">
+                    </div>
+                </div>
+
+                <!-- Menu Desktop -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="./index.html"
+                            class="text-lg font-medium text-gray-900 hover:text-[#764472] transition">Home</a>
+                        <a href="./index.html#sobre"
+                            class="text-lg font-medium text-gray-900 hover:text-[#764472] transition">Sobre</a>
+                        <a href="./index.html#depoimento"
+                            class="text-lg font-medium text-gray-900 hover:text-[#764472] transition">Depoimentos</a>
+                        <a href="./index.html#faq"
+                            class="text-lg font-medium text-gray-900 hover:text-[#764472] transition">FAQ</a>
+                        <a href="./login.html"
+                            class="text-lg font-medium text-gray-900 hover:text-[#764472] transition">
+                            <i class="fas fa-user text-[#764472]"></i>
+
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CONFIG MENI Mobile -->
+                <div class="md:hidden">
+                    <button type="button" id="mobile-menu-button"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-900 hover:text-[#764472] focus:outline-none">
+                        <span class="sr-only">Abrir menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="hidden md:hidden bg-white" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#inicio"
+                    class="block px-3 py-2 text-lg font-medium text-gray-900 hover:bg-[#764472] rounded-md">Inicio</a>
+                <a href="#sobre"
+                    class="block px-3 py-2 text-lg font-medium text-gray-900 hover:bg-[#764472] rounded-md">Sobre</a>
+                <a href="#depoimento"
+                    class="block px-3 py-2 text-lg font-medium text-gray-900 hover:bg-[#764472] rounded-md">Depoimentos</a>
+                <a href="#faq"
+                    class="block px-3 py-2 text-lg font-medium text-gray-900 hover:bg-[#764472] rounded-md">FAQ</a>
+
+            </div>
+        </div>
+
+        <!-- FIM CONFIG MENU MOBILE  -->
+    </header>
+
+
+
+
+
+    <!--  Introdução -->
+    <section class="relative h-screen flex items-center justify-center bg-cover bg-center"
+        style="background-image: url('./img/banner/bannerhome.png');">
+
+        <div class="absolute inset-0 bg-black opacity-50 "></div>
+
+        <div class="relative text-center text-white px-6 md:px-12">
+            <h1 class="text-6xl font-bold animate__animated animate__fadeIn animate__delay-1s ">Bem-vindo a
+
+                <span class="relative inline-block text-6xl font-bold">
+                    <!-- Efeito de borda simulada -->
+                    <span class="absolute inset-0 [text-shadow:_0_0_4px_white,_0_0_2px_white] text-transparent">
+                        Cripto Cursos
+                    </span>
+                    <!-- Texto com gradiente -->
+                    <span class="relative bg-gradient-to-r from-[#D14B8A] to-[#1C3D5A] bg-clip-text text-transparent">
+                        Cripto Cursos
+                    </span>
+
+                </span>
+            </h1>
+
+            <p class="mt-4 text-lg animate__animated animate__fadeIn animate__delay-1s">
+                Desenhamos o futuro das criptomoedas com inovação e criatividade. <br>
+                Dê vida ao seu projeto com nossa expertise em design para o mundo digital."
+            </p>
+            <button
+                class="mt-16 px-10 py-4 bg-gradient-to-r from-[#D14B8A] to-[#1C3D5A] hover:from-[#1C3D5A] hover:to-[#D14B8A] text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                Matricule-se
+            </button>
+
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- Sobre o Curso -->
+    <section id="sobre" class="py-16 bg-white  text-center ">
+        <div class="mx-auto">
+            <img src="./img/gifs/search.gif" alt="pincel" class="w-24 md:w-32 lg:w-40 mx-auto">
+        </div>
+        <h3 class="text-5xl font-semibold text-[#764472] ">Sobre o Curso</h3>
+        <p class="mt-4 text-lg text-gray-800 max-w-3xl mx-auto">Aprenda tudo sobre o universo das criptomoedas de forma
+            gratuita! <br>
+            Do básico ao avançado: descubra como comprar, minerar e vender criptoativos com aulas práticas e teoria
+            sólida. <br>
+            Domine as melhores estratégias do mercado com especialistas e utilize as ferramentas mais modernas para
+            investir com segurança e eficiência</p>
+
+
+        <div
+            class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto px-6 md:flex md:flex-wrap md:justify-center">
+            <!-- Item 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center w-full max-w-sm">
+                <div class="mb-4 text-[#764472]">
+                    <i class="fas fa-book text-4xl"></i>
+                </div>
+                <h4 class="text-xl font-semibold text-[#764472]">Fundamentos e Prática</h4>
+                <p class="mt-4 text-gray-600">Aprenda os conceitos essenciais das criptomoedas, como funcionam, sua
+                    tecnologia e aplique o conhecimento na prática.</p>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center w-full max-w-sm">
+                <div class="mb-4 text-[#764472]">
+                    <i class="fas fa-coins text-4xl"></i>
+                </div>
+                <h4 class="text-xl font-semibold text-[#764472]">Compra, Venda e Mineração</h4>
+                <p class="mt-4 text-gray-600">Descubra como comprar, vender e minerar criptomoedas de forma segura e
+                    eficiente.</p>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center w-full max-w-sm">
+                <div class="mb-4 text-[#764472]">
+                    <i class="fas fa-shield-alt text-4xl"></i>
+                </div>
+                <h4 class="text-xl font-semibold text-[#764472]">Segurança e Estratégias</h4>
+                <p class="mt-4 text-gray-600">Aprenda a proteger seus investimentos e utilizar estratégias para
+                    potencializar seus ganhos no mercado cripto.</p>
+            </div>
+        </div>
+
+
+        <!-- Container Principal -->
+        <div class="mt-16 flex flex-col lg:flex-row items-center max-w-6xl mx-auto text-center lg:text-left">
+            <!-- Imagem do Curso -->
+            <div class="w-full md:w-3/4 lg:w-1/2">
+                <img src="./img/cursos/imgcurso.jpeg" alt="Imagem sobre Criptomoedas"
+                    class="w-full object-cover rounded-lg shadow-lg">
+            </div>
+
+            <!-- Descrição Estendida -->
+            <div class="w-full md:w-3/4 lg:w-1/2 mt-8 lg:mt-0 px-6">
+                <h4 class="text-2xl font-semibold text-[#764472]">Por que fazer este curso?</h4>
+                <p class="mt-4 text-lg text-gray-800">Aprenda tudo sobre criptomoedas de forma gratuita! Desde o básico
+                    até estratégias avançadas de compra, venda e mineração, este curso te prepara para o mercado cripto.
+                </p>
+
+                <div class="mt-8 space-y-6">
+                    <div class="flex items-center space-x-4 justify-center lg:justify-start">
+                        <div class="text-[#764472] text-3xl">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <p class="text-lg text-gray-600">Entenda como funcionam as criptomoedas, como comprar, vender e
+                            armazenar seus ativos com segurança.</p>
+                    </div>
+                    <div class="flex items-center space-x-4 justify-center lg:justify-start">
+                        <div class="text-[#764472] text-3xl">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <p class="text-lg text-gray-600">Aprenda sobre mineração de criptomoedas, seus processos e como
+                            lucrar com isso.</p>
+                    </div>
+                    <div class="flex items-center space-x-4 justify-center lg:justify-start">
+                        <div class="text-[#764472] text-3xl">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <p class="text-lg text-gray-600">Descubra as melhores estratégias de segurança para proteger
+                            seus investimentos contra fraudes e ataques.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Depoimentos -->
+    <section class="relative py-20 bg-gray-50 " id="depoimento">
+        <div class="absolute inset-0 "></div>
+
+
+        <div class="relative max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2
+                    class="text-4xl font-bold bg-gradient-to-r from-[#D14B8A] to-[#1C3D5A] bg-clip-text text-transparent">
+                    O que nossos alunos dizem</h2>
+                <p class="mt-4 text-lg text-gray-600">Veja as avaliações de quem já fez o curso.</p>
+            </div>
+
+            <!-- avaliações -->
+            <div class="flex flex-wrap justify-center gap-8">
+                <!-- Avaliação 1 -->
+                <div class="w-full sm:w-80 bg-white rounded-lg shadow-lg p-6 hover:scale-105 transition-transform">
+                    <div class="flex justify-between items-center mb-4">
+                        <div class="flex items-center">
+                            <img src="./img/alunos/aluno2.jpeg" alt="Aluno 1" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold text-lg text-gray-800">Ana Costa</h4>
+                                <p class="text-gray-600">Aluna do curso de Mineraçao de cripto</p>
+                            </div>
+                        </div>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"O curso foi incrível! Aprendi muito sobre o que é criptomoedas e como
+                        minera-las.
+                        As dicas práticas do Professor João realmente fizeram a
+                        diferença!"</p>
+                </div>
+
+                <!-- Avaliação 2 -->
+                <div class="w-full sm:w-80 bg-white rounded-lg shadow-lg p-6 hover:scale-105 transition-transform">
+                    <div class="flex justify-between items-center mb-4">
+                        <div class="flex items-center">
+                            <img src="./img/alunos/aluno1.jpeg" alt="Aluno 2" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold text-lg text-gray-800">Carlos Lima</h4>
+                                <p class="text-gray-600">Aluno do curso de Trade</p>
+                            </div>
+                        </div>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"O curso de Trade me deu uma visão clara e objetiva sobre o mercado de
+                        cripto.
+                        As técnicas ensinadas são super úteis para o mercado de trabalho!"</p>
+                </div>
+
+                <!-- Avaliação 3 -->
+                <div class="w-full sm:w-80 bg-white rounded-lg shadow-lg p-6 hover:scale-105 transition-transform">
+                    <div class="flex justify-between items-center mb-4">
+                        <div class="flex items-center">
+                            <img src="./img/alunos/aluno3.jpeg" alt="Aluno 3" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold text-lg text-gray-800">Lucas Pereira</h4>
+                                <p class="text-gray-600">Aluno do curso de Carteira Digital</p>
+                            </div>
+                        </div>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"Excelente! O CriptoCurso me ajudou a aprimorar minhas habilidades,
+                        principalmente na criação de carteiras digitais e manipulação."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Inscrição -->
+    <section class="py-16 bg-gradient-to-r from-blue-50 to-purple-50 text-center relative overflow-hidden">
+        <!-- Elementos decorativos -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-10">
+            <div class="absolute top-20 left-10 w-16 h-16 bg-blue-400 rounded-full filter blur-xl"></div>
+            <div class="absolute bottom-10 right-20 w-24 h-24 bg-purple-300 rounded-full filter blur-xl"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <h3 class="text-4xl font-bold text-[#764472] mb-6">
+                Desperte seu potencial com o poder das criptomoedas
+                <span
+                    class="block text-transparent bg-clip-text bg-gradient-to-r from-[#764472] to-[#D14B8A] text-5xl mt-2">
+                    e domine o mercado cripto
+                </span>
+            </h3>
+
+            <p class="text-xl text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed">
+                Inscreva-se agora e aprenda tudo sobre criptomoedas, desde como comprar e vender até minerar e investir
+                com segurança.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+                <button id="open-contact"
+                    class="px-10 py-4 bg-gradient-to-r from-[#764472] to-[#D14B8A] hover:from-[#764472]  hover:to-[#1C3D5A] text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    Comece sua jornada
+                </button>
+            </div>
+
+            <div class="flex items-center justify-center space-x-2 text-gray-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#764472]" viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd" />
+                </svg>
+                <span>Certificado de conclusão</span>
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#764472]" viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd" />
+                </svg>
+                <span>Acesso vitalício</span>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- FAQ -->
+    <section class="py-20 " id="faq">
+        <div class="max-w-5xl mx-auto text-left">
+            <h2 class="text-4xl font-semibold text-[#764472] mb-8 text-center">FAQ</h2>
+            <div class="space-y-6">
+                <!-- Pergunta 1 -->
+                <details class="bg-white p-6 rounded-lg shadow-md group">
+                    <summary
+                        class="flex justify-between items-center text-lg font-semibold text-[#764472] cursor-pointer">
+                        O que é o curso de Criptomoedas?
+                        <span
+                            class="text-xl text-gray-600 transition-transform transform rotate-0 group-open:rotate-45">+</span>
+                    </summary>
+                    <p class="mt-4 text-gray-700">Este curso é ideal para quem quer entender como funcionam as
+                        criptomoedas, como investir nelas de forma segura e explorar as tecnologias por trás delas, como
+                        blockchain e contratos inteligentes.</p>
+                </details>
+
+                <!-- Pergunta 2 -->
+                <details class="bg-white p-6 rounded-lg shadow-md group">
+                    <summary
+                        class="flex justify-between items-center text-lg font-semibold text-[#764472] cursor-pointer">
+                        Quais ferramentas serão ensinadas?
+                        <span
+                            class="text-xl text-gray-600 transition-transform transform rotate-0 group-open:rotate-45">+</span>
+                    </summary>
+                    <p class="mt-4 text-gray-700">Você aprenderá a usar as principais ferramentas de negociação e
+                        análise de criptomoedas, como Binance, Coinbase, além de plataformas para monitorar o mercado e
+                        estudar diferentes tokens e altcoins.</p>
+                </details>
+
+                <!-- Pergunta 3 -->
+                <details class="bg-white p-6 rounded-lg shadow-md group">
+                    <summary
+                        class="flex justify-between items-center text-lg font-semibold text-[#764472] cursor-pointer">
+                        O curso é presencial ou online?
+                        <span
+                            class="text-xl text-gray-600 transition-transform transform rotate-0 group-open:rotate-45">+</span>
+                    </summary>
+                    <p class="mt-4 text-gray-700">O curso é 100% online, com aulas ao vivo e gravadas. Além disso, você
+                        terá acesso a uma plataforma interativa para discutir estratégias de investimento e tirar
+                        dúvidas com instrutores especializados.</p>
+                </details>
+
+                <!-- Pergunta 4 -->
+                <details class="bg-white p-6 rounded-lg shadow-md group">
+                    <summary
+                        class="flex justify-between items-center text-lg font-semibold text-[#764472] cursor-pointer">
+                        Como faço para me inscrever?
+                        <span
+                            class="text-xl text-gray-600 transition-transform transform rotate-0 group-open:rotate-45">+</span>
+                    </summary>
+                    <p class="mt-4 text-gray-700">A inscrição é simples! Basta acessar o nosso site e clicar no botão de
+                        inscrição. Após confirmar seu pagamento, você terá acesso imediato ao conteúdo do curso e aos
+                        materiais exclusivos.</p>
+                </details>
+
+                <!-- Pergunta 5 -->
+                <details class="bg-white p-6 rounded-lg shadow-md group">
+                    <summary
+                        class="flex justify-between items-center text-lg font-semibold text-[#764472] cursor-pointer">
+                        Há suporte durante o curso?
+                        <span
+                            class="text-xl text-gray-600 transition-transform transform rotate-0 group-open:rotate-45">+</span>
+                    </summary>
+                    <p class="mt-4 text-gray-700">Sim! Oferecemos suporte contínuo durante o curso. Você poderá
+                        interagir com instrutores e outros alunos por meio de chats, fóruns e sessões de esclarecimento
+                        ao vivo sobre o mercado de criptomoedas.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <footer class="bg-gradient-to-r from-[#D14B8A] to-[#1C3D5A] pt-10 pb-8">
+        <div class="max-w-7xl mx-auto px-5">
+            <!-- Container Flex para alinhamento -->
+            <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center lg:items-start text-center lg:text-left">
+
+                <!-- Logo-->
+                <div class="flex-1 min-w-[250px]">
+                    <div class="flex items-center justify-center lg:justify-start gap-4 mb-4">
+                        <h1 class="text-4xl font-bold">
+                            CriptoCurso
+                        </h1>
+                    </div>
+                    <p class="text-gray-900 text-sm mb-3">
+                        Transforme sua carreira com nossos cursos de cripto.
+                    </p>
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-2">
+                        <span
+                            class="px-2 py-1 bg-gray-900 rounded-full text-xs text-gray-200 hover:bg-[#1C3D5A] transition">Cripto</span>
+                        <span
+                            class="px-2 py-1 bg-gray-900 rounded-full text-xs text-gray-200 hover:bg-[#1C3D5A] transition">Trade</span>
+                        <span
+                            class="px-2 py-1 bg-gray-900 rounded-full text-xs text-gray-200 hover:bg-[#1C3D5A] transition">Carteira
+                            Digital</span>
+                    </div>
+                </div>
+
+                <!-- Links -->
+                <div class="flex-1 min-w-[180px]">
+                    <h4 class="text-lg font-semibold mb-3 text-[#D14B8A]">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#sobre"
+                                class="text-gray-900 hover:text-[#D14B8A] text-md flex items-center justify-center lg:justify-start">
+                                <span class="w-1.5 h-1.5 bg-[#D14B8A] rounded-full mr-2"></span>
+                                Sobre Nós
+                            </a></li>
+                        <li><a href="#depoimento"
+                                class="text-gray-900 hover:text-[#D14B8A] text-md flex items-center justify-center lg:justify-start">
+                                <span class="w-1.5 h-1.5 bg-[#D14B8A] rounded-full mr-2"></span>
+                                Depoimentos
+                            </a></li>
+                        <li><a href="#faq"
+                                class="text-gray-900 hover:text-[#D14B8A] text-md flex items-center justify-center lg:justify-start">
+                                <span class="w-1.5 h-1.5 bg-[#D14B8A] rounded-full mr-2"></span>
+                                FAQ
+                            </a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter e Contato -->
+                <div class="flex-1 min-w-[250px]">
+                    <h4 class="text-lg font-semibold mb-3 text-[#D14B8A]">Receba Ofertas</h4>
+                    <form class="mb-4">
+                        <div class="flex">
+                            <input type="email" placeholder="Seu melhor e-mail"
+                                class="flex-grow px-3 py-2 rounded-l-md bg-white border border-gray-300 focus:border-[#D14B8A] focus:ring-1 focus:ring-[#D14B8A] outline-none text-sm text-gray-700 transition">
+                            <button type="submit"
+                                class="px-3 bg-[#D14B8A] hover:bg-[#D14B8A] text-white rounded-r-md transition">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="mb-4">
+                        <div class="flex items-center justify-center lg:justify-start mb-2">
+                            <div class="bg-white p-2 rounded-full mr-2 shadow-sm">
+                                <i class="fas fa-envelope text-[#D14B8A] text-sm"></i>
+                            </div>
+                            <a href="mailto:contato@pixelcraft.com"
+                                class="text-gray-900 hover:text-[#D14B8A] text-sm transition">contato@pixelcraft.com</a>
+                        </div>
+                        <div class="flex items-center justify-center lg:justify-start">
+                            <div class="bg-white p-2 rounded-full mr-2 shadow-sm">
+                                <i class="fas fa-phone-alt text-[#D14B8A] text-sm"></i>
+                            </div>
+                            <a href="tel:+5511987654321"
+                                class="text-gray-900 hover:text-[#D14B8A] text-sm transition">(11) 98765-4321</a>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center lg:justify-start space-x-3">
+                        <a href="#"
+                            class="w-8 h-8 rounded-md bg-white flex items-center justify-center text-gray-900 hover:bg-[#E4405F] hover:text-white transition shadow-sm">
+                            <i class="fab fa-instagram text-sm"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-md bg-white flex items-center justify-center text-gray-700 hover:bg-[#1DA1F2] hover:text-white transition shadow-sm">
+                            <i class="fab fa-twitter text-sm"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-md bg-white flex items-center justify-center text-gray-700 hover:bg-[#0A66C2] hover:text-white transition shadow-sm">
+                            <i class="fab fa-linkedin-in text-sm"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-md bg-white flex items-center justify-center text-gray-700 hover:bg-[#FF0000] hover:text-white transition shadow-sm">
+                            <i class="fab fa-youtube text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divisor -->
+            <div class="border-t border-gray-300 my-6"></div>
+
+            <!-- Rodapé Inferior -->
+            <div class="flex flex-col justify-between items-center text-sm text-gray-900 text-center">
+                <p class="mb-3 md:mb-0">
+                    © 2023 PixelCraft Academy. Todos os direitos reservados.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-[#D14B8A] transition">Termos</a>
+                    <a href="#" class="hover:text-[#D14B8A] transition">Privacidade</a>
+                    <a href="#" class="hover:text-[#D14B8A] transition">Políticas</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- MODAL -->
+    <div id="contact-modal" class="fixed inset-0 z-50 hidden overflow-y-auto">
+        <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+                <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+            </div>
+            <div
+                class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+                <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Entre em Contato</h3>
+
+                    <form id="contact-form" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Nome</label>
+                            <input type="text" id="name" name="name" required
+                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500 p-2 border">
+                        </div>
+
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700">Telefone</label>
+                            <input type="tel" id="phone" name="phone" required
+                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500 p-2 border">
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                            <input type="email" id="email" name="email" required
+                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500 p-2 border">
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700">Mensagem</label>
+                            <textarea id="message" name="message" rows="4" required
+                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500 p-2 border"></textarea>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                    <button type="submit" form="contact-form"
+                        class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-purple-600 text-base font-medium text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 sm:ml-3 sm:w-auto sm:text-sm">
+                        Enviar Mensagem
+                    </button>
+                    <button type="button" id="close-modal"
+                        class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
+                        Cancelar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIM CONFIG MODAL inscrever -->
+
+
+
+
+
+
+    <!-- config Botão do WhatsApp -->
+    <a target="_blank" href="https://web.whatsapp.com/"
+        class="fixed bottom-6 right-6 w-16 h-16 flex items-center justify-center bg-gradient-to-r from-[#D14B8A] to-[#1C3D5A] text-white rounded-full shadow-xl hover:bg-purple-600 hover:shadow-2xl transition-all duration-300 group">
+        <i class="fab fa-whatsapp text-3xl"></i>
+
+        <!-- animação botao-->
+        <span
+            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-0 group-hover:opacity-40"></span>
+    </a>
+
+
+
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!--Script-->
+    <script src="./js/home.js"></script>
+</body>
+
+</html>

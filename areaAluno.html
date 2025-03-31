@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logocripto.png" type="image/x-icon">
+    <title>CriptoCurso - Aluno</title>
+
+    <link rel="stylesheet" href="./css/areaAluno.css">
+    <!-- tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+    <header class="bg-white fixed top-0 w-full z-50 shadow-md">
+        <nav class="mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex h-20 items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center h-12">
+                    <div class="h-full flex items-center">
+                        <img src="./img//logo/logocripto.png" alt="Logo" class="h-40 w-auto object-contain max-h-40">
+                    </div>
+                </div>
+
+
+                <!-- CONFIG MENI Mobile -->
+                <div class="md:hidden">
+                    <button type="button" id="mobile-menu-button"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-900 hover:text-[#764472] focus:outline-none">
+                        <span class="sr-only">Abrir menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="hidden md:hidden bg-white" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#inicio"
+                    class="block px-3 py-2 text-lg font-medium text-gray-900 hover:bg-[#764472] rounded-md">Inicio</a>
+                <a href="#sobre"
+                    class="block px-3 py-2 text-lg font-medium text-gray-900 hover:bg-[#764472] rounded-md">Meus
+                    Cursos</a>
+                <a href="#depoimento"
+                    class="block px-3 py-2 text-lg font-medium text-gray-900 hover:bg-[#764472] rounded-md">Mais
+                    Cursos</a>
+                <a href="#faq"
+                    class="block px-3 py-2 text-lg font-medium text-gray-900 hover:bg-[#764472] rounded-md">Provas</a>
+                <a href="#faq"
+                    class="block px-3 py-2 text-lg font-medium text-gray-900 hover:bg-[#764472] rounded-md">Suporte</a>
+                <a href="#faq"
+                    class="block px-3 py-2 text-lg font-medium text-gray-900 hover:bg-[#764472] rounded-md">Sair</a>
+
+            </div>
+        </div>
+
+        <!-- FIM CONFIG MENU MOBILE  -->
+    </header>
+
+    <div class="flex">
+        <!-- Menu Lateral  -->
+        <aside class="hidden md:flex w-64 bg-white text-[#764472] h-screen fixed top-20 left-0 p-5 shadow-md">
+            <nav class="w-full">
+                <ul class="space-y-4">
+                    <li><a href="./areaAluno.html" class="block p-3 rounded bg-[#764472] text-white flex items-center">
+                            <i class="fas fa-home mr-2"></i> Início </a>
+                    </li>
+                    <li>
+                        <a href="#sobre"
+                            class="block p-3 rounded hover:bg-[#764472] hover:text-white flex items-center">
+                            <i class="fas fa-book mr-2"></i> Meus Cursos </a>
+                    </li>
+                    <li>
+                        <a href="#depoimento"
+                            class="block p-3 rounded hover:bg-[#764472] hover:text-white flex items-center">
+                            <i class="fas fa-cogs mr-2"></i> Mais Cursos </a>
+                    </li>
+                    <li>
+                        <a href="#faq" class="block p-3 rounded hover:bg-[#764472] hover:text-white flex items-center">
+                            <i class="fas fa-file-alt mr-2"></i>Agendar Provas</a>
+                    </li>
+                    <li>
+                        <a href="#faq" class="block p-3 rounded hover:bg-[#764472] hover:text-white flex items-center">
+                            <i class="fas fa-headset mr-2"></i> Suporte</a>
+                    </li>
+                    <li>
+                        <a href="#faq" class="block p-3 rounded hover:bg-[#764472] hover:text-white flex items-center">
+                            <i class="fas fa-sign-out-alt mr-2"></i> Sair</a>
+                    </li>
+                </ul>
+            </nav>
+
+
+        </aside>
+
+        <!-- Conteúdo principal -->
+        <main class="flex-1 p-10 md:ml-64 mt-20">
+
+            <!-- Cursos em Andamento -->
+            <section class="cursos-andamento  mx-auto">
+                <h1 class="text-3xl font-bold mb-6 text-[#764472]">Cursos em andamento</h1>
+
+                <!-- Grade de Cursos -->
+                <div id="cursoContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                </div>
+
+                <!-- Links de Ação -->
+                <div class="flex justify-end mt-6">
+                    <a id="loadMoreLink" href="#" class="text-[#764472] font-semibold hover:underline">Mostrar mais</a>
+                    <a id="showLessLink" href="#"
+                        class="text-[#764472] font-semibold hover:underline hidden ml-4">Mostrar menos</a>
+                </div>
+            </section>
+
+
+
+            <!-- Eventos -->
+            <section class="evento p-6  rounded-lg mt-16">
+                <h2 class="text-3xl font-bold mb-6 text-[#764472]">Novidades do Curso</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Lista de eventos -->
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="p-3 bg-gray-100 rounded-md shadow">
+                                <strong class="text-[#764472]">Live com especialistas</strong> - Dia 05/04 às 19h.
+                            </li>
+                            <li class="p-3 bg-gray-100 rounded-md shadow">
+                                <strong class="text-[#764472]">Prova de segurança digital</strong> - Dia 10/04.
+                            </li>
+                            <li class="p-3 bg-gray-100 rounded-md shadow">
+                                <strong class="text-[#764472]">Novo curso disponível!</strong> - Lançamento em 15/04.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Calendário Dinâmico -->
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <div class="flex justify-between items-center mb-3">
+                            <button id="prevMonth" class="text-[#764472] font-bold">&lt;</button>
+                            <h3 id="calendarTitle" class="text-xl font-bold text-[#764472]"></h3>
+                            <button id="nextMonth" class="text-[#764472] font-bold">&gt;</button>
+                        </div>
+
+                        <div class="grid grid-cols-7 gap-2 text-center">
+                            <div class="font-bold text-gray-600">D</div>
+                            <div class="font-bold text-gray-600">S</div>
+                            <div class="font-bold text-gray-600">T</div>
+                            <div class="font-bold text-gray-600">Q</div>
+                            <div class="font-bold text-gray-600">Q</div>
+                            <div class="font-bold text-gray-600">S</div>
+                            <div class="font-bold text-gray-600">S</div>
+                        </div>
+
+                        <!-- Calendar Grid -->
+                        <div id="calendarGrid" class="grid grid-cols-7 gap-2 mt-2 text-center">
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- Forum -->
+            <section class="forum p-8 bg-gray-100">
+                <h2 class="text-3xl font-bold mb-6 text-[#764472]">Fórum de Discussão</h2>
+                <div class=" mx-auto bg-white p-6 rounded-lg shadow-md">
+                    <!-- Formulário de novo post -->
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold mb-2">Adicionar Novo Comentário</h3>
+                        <textarea class="w-full p-4 border border-gray-300 rounded-md resize-none" rows="4" placeholder="Compartilhe sua experiência ou dúvida..."></textarea>
+                        <button class="mt-4 px-6 py-2 bg-[#764472] text-white rounded-md hover:bg-[#764472]">Postar</button>
+                    </div>
+            
+                    <!-- Comentários -->
+                    <div class="comments mt-8">
+                        <div class="comment mb-6 p-4 border-b border-gray-300">
+                            <div class="flex items-center mb-2">
+                                <div class="avatar w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center text-white">J</div>
+                                <span class="ml-2 font-semibold">João Silva</span>
+                                <span class="ml-4 text-sm text-gray-500">2 horas atrás</span>
+                            </div>
+                            <p class="text-gray-700">Esse curso tem sido muito útil para minha carreira, principalmente as aulas sobre segurança digital. Estou aprendendo muito!</p>
+                        </div>
+            
+                        <div class="comment mb-6 p-4 border-b border-gray-300">
+                            <div class="flex items-center mb-2">
+                                <div class="avatar w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center text-white">M</div>
+                                <span class="ml-2 font-semibold">Maria Souza</span>
+                                <span class="ml-4 text-sm text-gray-500">1 dia atrás</span>
+                            </div>
+                            <p class="text-gray-700">Estou tendo dificuldades com o módulo de redes, alguém pode me ajudar a entender os conceitos de VPN?</p>
+                        </div>
+            
+                        <div class="comment mb-6 p-4 border-b border-gray-300">
+                            <div class="flex items-center mb-2">
+                                <div class="avatar w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center text-white">A</div>
+                                <span class="ml-2 font-semibold">André Lima</span>
+                                <span class="ml-4 text-sm text-gray-500">3 dias atrás</span>
+                            </div>
+                            <p class="text-gray-700">Acho que seria interessante ter mais exemplos práticos no curso. Alguém mais concorda?</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+
+        </main>
+    </div>
+
+
+
+
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- config areaAluno -->
+    <script src="./js/areaAluno.js"></script>
+    <!-- carregar mais cursos -->
+    <script src="./js/carregarmais.js"></script>
+    <!-- calendario -->
+    <script src="./js/calendario.js"></script>
+
+</body>
+
+</html>
