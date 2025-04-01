@@ -5,7 +5,7 @@
 
 ## ✨ Demonstração
 
-[![Ver Demonstração](https://img.shields.io/badge/🌐_Acessar_Plataforma-764472?style=for-the-badge)](https://seusite.com)
+[![Ver Demonstração](https://img.shields.io/badge/🌐_Acessar_Plataforma-764472?style=for-the-badge)]([https://seusite.com](https://cripto-curso.vercel.app/))
 
 ## 🚀 Recursos Principais
 
